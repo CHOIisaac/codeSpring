@@ -12,10 +12,8 @@
 		<!-- <property name="driverClassName" value="oracle.jdbc.driver.OracleDriver"></property>
 			<property name="jdbcUrl" value="jdbc:oracle:thin:@localhost:1521:XE"></property> -->
 
-		<property name="driverClassName"
-				  value="net.sf.log4jdbc.sql.jdbcapi.DriverSpy"></property>
-		<property name="jdbcUrl"
-				  value="jdbc:log4jdbc:oracle:thin:@localhost:1521:XE"></property>
+		<property name="driverClassName" value="net.sf.log4jdbc.sql.jdbcapi.DriverSpy"></property>
+		<property name="jdbcUrl" value="jdbc:log4jdbc:oracle:thin:@localhost:1521:XE"></property>
 
 		<property name="username" value="book_ex"></property>
 		<property name="password" value="book_ex"></property>
@@ -24,7 +22,8 @@
 	<!-- HikariCP configuration -->
 	<bean id="dataSource" class="com.zaxxer.hikari.HikariDataSource"
 		  destroy-method="close">
-<!--		<constructor-arg ref="hikariConfig" />  자동 생성되어 삭제 해야 함 ... 이유는 아직 모르겠음 -->
+		<constructor-arg ref="hikariConfig" />
+<!--		자동 생성되어 삭제 해야 함 ... 이유는 아직 모르겠음 -->
 	</bean>
 
 	<bean id="sqlSessionFactory"
