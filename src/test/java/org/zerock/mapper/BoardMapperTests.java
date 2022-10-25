@@ -40,4 +40,24 @@ public class BoardMapperTests {
         mapper.insertSelectKey(boardVO);
         log.info(boardVO);
     }
+    @Test
+    public void testRead(){
+        BoardVO boardVO = mapper.read(1L);
+        log.info(boardVO);
+    }
+    @Test
+    public void testDelete(){
+        log.info("DELETE COUNT: "+mapper.delete(1L));
+    }
+    @Test
+    public void testUpdate(){
+        BoardVO boardVO = new BoardVO();
+        boardVO.setBno(21L);
+        boardVO.setTitle("수정된 제목");
+        boardVO.setContent("수정된 내용");
+        boardVO.setWriter("user00");
+
+        int count = mapper.update(boardVO);
+        log.info("UPDATE COUNT: "+count);
+    }
 }
