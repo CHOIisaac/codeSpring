@@ -19,7 +19,8 @@ public class BoardMapperTests {
 
     @Test
     public void testGetList(){
-        mapper.getList().forEach(board -> log.info(board));
+        log.info(mapper.getList());
+//        mapper.getList().forEach(board -> log.info(board));
     }
 
     @Test
@@ -42,7 +43,7 @@ public class BoardMapperTests {
     }
     @Test
     public void testRead(){
-        BoardVO boardVO = mapper.read(1L);
+        BoardVO boardVO = mapper.read(22L);
         log.info(boardVO);
     }
     @Test

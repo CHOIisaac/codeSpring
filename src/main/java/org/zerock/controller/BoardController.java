@@ -15,7 +15,7 @@ import org.zerock.service.BoardService;
 @Log4j
 @Controller
 @AllArgsConstructor
-@RequestMapping("/board/*")
+@RequestMapping("/board")
 public class BoardController {
     private BoardService service;
 
@@ -23,6 +23,7 @@ public class BoardController {
     public void list(Model model){
         log.info("list");
         model.addAttribute("list", service.getList());
+        log.info("list");
     }
 
     @PostMapping("/register")
