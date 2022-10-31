@@ -20,8 +20,7 @@
 	</bean>
 
 	<!-- HikariCP configuration -->
-	<bean id="dataSource" class="com.zaxxer.hikari.HikariDataSource"
-		  destroy-method="close" >
+	<bean id="dataSource" class="com.zaxxer.hikari.HikariDataSource" destroy-method="close">
 		<constructor-arg ref="hikariConfig" />
 <!--		자동 생성되어 삭제 해야 함 ... 이유는 아직 모르겠음 -->
 	</bean>

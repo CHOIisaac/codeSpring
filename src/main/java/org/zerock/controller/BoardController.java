@@ -15,7 +15,7 @@ import org.zerock.service.BoardService;
 @Log4j
 @Controller
 @AllArgsConstructor
-@RequestMapping("/board")
+@RequestMapping("/board/*")
 public class BoardController {
     private BoardService service;
 

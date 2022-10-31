@@ -17,7 +17,7 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="ch4" options="-Xlint:all" />
+      <module name="ch4" options="" />
     </option>
   </component>
 </project>
