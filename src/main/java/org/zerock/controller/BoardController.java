@@ -25,6 +25,11 @@ public class BoardController {
         model.addAttribute("list", service.getList());
         log.info("list");
     }
+    
+    @GetMapping("/register")
+    public void register(){
+
+    }
 
     @PostMapping("/register")
     public String register(BoardVO boardVO, RedirectAttributes rttr){
