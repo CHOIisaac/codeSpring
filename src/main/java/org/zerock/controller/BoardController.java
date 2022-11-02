@@ -25,7 +25,7 @@ public class BoardController {
         model.addAttribute("list", service.getList());
         log.info("list");
     }
-    
+
     @GetMapping("/register")
     public void register(){
 
@@ -39,9 +39,9 @@ public class BoardController {
         return "redirect:/board/list";
     }
 
-    @GetMapping("/get")
+    @GetMapping({"/get", "/modify"})
     public void get(@RequestParam("bno") Long bno, Model model){
-        log.info("/get");
+        log.info("/get or modify");
         model.addAttribute("board",service.get(bno));
     }
 
