@@ -30,7 +30,7 @@
                                 <label>Bno</label> <input class="form-control" name='bno' value='<c:out value="${board.bno}"/> ' readonly="readonly">
                             </div>
                             <div class="form-group">
-                                <label>Title</label> <input class="form-control" name='bno' value='<c:out value="${board.title}"/> '>
+                                <label>Title</label> <input class="form-control" name='title' value='<c:out value="${board.title}"/> '>
                             </div>
                             <div class="form-group">
                                 <label>Text area</label>
@@ -64,10 +64,17 @@
         $('button').on("click", function (){
             e.preventDefault();
             var operation = $(this).data("oper");
+            console.log(operation);
 
-
-        })
-    })
+            if (operation==='remove'){
+                formObj.attr("action","/board/remove")
+            }else if (operation==='list'){
+                self.location="/board/list";
+                return;
+            }
+            formObj.submit();
+        });
+    });
 </script>
 
     <%@include file="../includes/footer.jsp"%>
