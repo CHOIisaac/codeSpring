@@ -61,7 +61,7 @@
 <script type="text/javascript">
     $(document).ready(function (){
         var formObj = $("form");
-        $('button').on("click", function (){
+        $('button').on("click", function (e){
             e.preventDefault();
             var operation = $(this).data("oper");
             console.log(operation);
@@ -69,8 +69,9 @@
             if (operation==='remove'){
                 formObj.attr("action","/board/remove")
             }else if (operation==='list'){
-                self.location="/board/list";
-                return;
+                // self.location="/board/list";
+                formObj.attr("action","/board/list").attr("method", "get");
+                formObj.empty();
             }
             formObj.submit();
         });
